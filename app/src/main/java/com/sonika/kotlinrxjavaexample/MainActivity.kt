@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
+import android.widget.Toast
 import io.reactivex.Observable
 import io.reactivex.Observer
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -38,6 +39,7 @@ class MainActivity : AppCompatActivity() {
             override fun onNext(t: String) {
 
                 tvHello.setText(t)
+                Toast.makeText(applicationContext, "Welcome to RxJava in android", Toast.LENGTH_SHORT).show()
             }
 
             override fun onError(e: Throwable) {
