@@ -11,7 +11,6 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
 
-
 class MainActivity : AppCompatActivity() {
 
     lateinit var tvHello: TextView
@@ -37,7 +36,6 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onNext(t: String) {
-
                 tvHello.setText(t)
                 Toast.makeText(applicationContext, "Welcome to RxJava in android", Toast.LENGTH_SHORT).show()
             }
